@@ -6,6 +6,7 @@ import Modal from '@material-ui/core/Modal';
 import { makeStyles } from '@material-ui/core/styles';
 import { Button, Input } from '@material-ui/core';
 import ImageUpload from './ImageUpload';
+// import InstagramEmbed from 'react-instagram-embed';
 
 function getModalStyle() {
   const top = 50;
@@ -187,12 +188,30 @@ function App() {
       </div>
       
       
+      <div className="app__posts">
+        <div className="app__postsLeft">
+        {
+          posts.map(({id, post}) => (
+            <Post key={id} caption={post.caption} userName = {post.userName} imageUrl={post.imageUrl}/>
+          ))
+        }
+        </div>
+        <div className="app__postRight">
+        {/* <InstagramEmbed
+          url='https://www.instagram.com/p/CHBK7-bgV-p/'
+          maxWidth={320}
+          hideCaption={false}
+          containerTagName='div'
+          protocol=''
+          injectScript
+          onLoading={() => {}}
+          onSuccess={() => {}}
+          onAfterRender={() => {}}
+          onFailure={() => {}}
+        /> */}
+        </div>
+      </div>
 
-      {
-        posts.map(({id, post}) => (
-          <Post key={id} caption={post.caption} userName = {post.userName} imageUrl={post.imageUrl}/>
-        ))
-      }
 
       {/* <Post userName="Username" caption="Wow that worked" imageUrl = "https://www.freemockupworld.com/wp-content/uploads/2019/08/Identity-Card-Holder-Mockup-PSD-1500x1400.jpg"/>
       <Post userName="Username" caption="Nope" imageUrl = "https://www.freemockupworld.com/wp-content/uploads/2019/08/Identity-Card-Holder-Mockup-PSD-1500x1400.jpg"/>

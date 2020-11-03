@@ -28,3 +28,8 @@
   display: flex;
   flex-direction: column;
 }
+
+.app__posts{
+padding: 20px;
+display: flex;
+}
