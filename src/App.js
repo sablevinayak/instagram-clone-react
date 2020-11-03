@@ -101,14 +101,7 @@ function App() {
 
   return (
     <div className="app">
-
-      {user?.displayName ? (
-        <ImageUpload userName = {user.displayName}/>
-        ) :(
-        <h3>Sory you need to login to upload</h3>
-      )}
       
-
       <Modal
         open={open}
         onClose={() => setOpen(false)}
@@ -205,6 +198,12 @@ function App() {
       <Post userName="Username" caption="Nope" imageUrl = "https://www.freemockupworld.com/wp-content/uploads/2019/08/Identity-Card-Holder-Mockup-PSD-1500x1400.jpg"/>
       <Post userName="Username" caption="Dope" imageUrl = "https://www.freemockupworld.com/wp-content/uploads/2019/08/Identity-Card-Holder-Mockup-PSD-1500x1400.jpg"/> */}
       {/* <Post/> */}
+
+      {user?.displayName ? (
+        <ImageUpload userName = {user.displayName}/>
+        ) :(
+        <h3>Sorry you need to login to upload</h3>
+      )}
 
     </div>
   );
