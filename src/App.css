@@ -13,7 +13,12 @@
   object-fit: contain;
 }
 
-.app__headerSignUp{
-  display:flex;
-  align-content: flex-end;
+.app__signup{
+  display: flex;
+  flex-direction: column;
+}
+
+.app__signin{
+  display: flex;
+  flex-direction: column;
 }
