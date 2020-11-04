@@ -1,3 +1,8 @@
+## App deployed and live on below link
+#### https://instagram-clone-react-40aec.web.app/
+
+# For Working Locally follow below steps
+
 ## Clone app and Install required npm modules
 #### npm install
 
