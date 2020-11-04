@@ -3,8 +3,9 @@
 
 import firebase from "firebase";
 
+# grab config from firebase console
 const firebaseApp = firebase.initializeApp({
-    apiKey: "AIzaSyCun9WGjf84EM-Iw6eQoFKPfaGq0QeICLI",
+    apiKey: "<api_key>",
     authDomain: "instagram-clone-react-40aec.firebaseapp.com",
     databaseURL: "https://instagram-clone-react-40aec.firebaseio.com",
     projectId: "instagram-clone-react-40aec",
