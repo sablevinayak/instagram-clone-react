@@ -68,7 +68,7 @@ function App() {
   }, [user, userName]);
 
   useEffect(() => {
-    db.collection('posts').onSnapshot(snapshot => {
+    db.collection('posts').orderBy('timestamp','asc').onSnapshot(snapshot => {
     setPosts(snapshot.docs.map(doc => ({
       id: doc.id,
       post: doc.data()
@@ -211,12 +211,6 @@ function App() {
         /> */}
         </div>
       </div>
-
-
-      {/* <Post userName="Username" caption="Wow that worked" imageUrl = "https://www.freemockupworld.com/wp-content/uploads/2019/08/Identity-Card-Holder-Mockup-PSD-1500x1400.jpg"/>
-      <Post userName="Username" caption="Nope" imageUrl = "https://www.freemockupworld.com/wp-content/uploads/2019/08/Identity-Card-Holder-Mockup-PSD-1500x1400.jpg"/>
-      <Post userName="Username" caption="Dope" imageUrl = "https://www.freemockupworld.com/wp-content/uploads/2019/08/Identity-Card-Holder-Mockup-PSD-1500x1400.jpg"/> */}
-      {/* <Post/> */}
 
       {user?.displayName ? (
         <ImageUpload userName = {user.displayName}/>
